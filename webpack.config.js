@@ -1,11 +1,11 @@
+const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const HtmlWebpackInlineSourcePlugin = require("html-webpack-inline-source-plugin")
 
-module.exports = {
+const UIConfig = {
   entry: "./ui/index.js",
-  // While this file is output it is not used as it is inlined within the html file
   output: {
-    path: __dirname,
+    path: path.join(__dirname, "dist"),
     filename: "ui.js"
   },
   module: {
@@ -26,6 +26,26 @@ module.exports = {
       inlineSource: ".js$"
     }),
     new HtmlWebpackInlineSourcePlugin()
-  ],
-  devServer: { writeToDisk: true }
+  ]
 }
+
+const RendererConfig = {
+  entry: "./code/index.js",
+  output: {
+    path: path.join(__dirname, "dist"),
+    filename: "code.js"
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      }
+    ]
+  }
+}
+
+module.exports = [UIConfig, RendererConfig]
