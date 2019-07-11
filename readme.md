@@ -6,11 +6,11 @@ figma-dev allows you to develop figma plugins using modern ES6 code for both the
 
 ## Install
 
-Use this repo as a template to get started
+Click the `Use this template` button to setup a new repo as this as the template
 
 Clone your version of the repo
 
-Run `> yarn install` or `npm install`
+Run `yarn install` or `npm install`
 
 Once all the dependencies are installed run `yarn dev` or `npm run dev` this will compile all your code and re-build on subsequent saves.
 
