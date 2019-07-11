@@ -1,7 +1,7 @@
 {
   "name": "figma-dev",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "html": "./dist/ui.html",
   "script": "./dist/code.js",
-  "id": "lejngflsknfd"
+  "id": "your-ID-goes-here"
 }
