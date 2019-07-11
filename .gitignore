@@ -2,5 +2,4 @@ node_modules
 .cache
 
 ## Ignore build files
-/ui.html
-/ui.js
+dist
