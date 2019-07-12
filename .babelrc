@@ -1,3 +1,11 @@
 {
-  "presets": ["@babel/env", "@babel/react"]
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": { "browsers": "last 2 Chrome versions", "node": "12" }
+      }
+    ],
+    "@babel/react"
+  ]
 }
